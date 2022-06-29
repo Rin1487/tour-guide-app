@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#FF75B4FE</color>
+    <color name="papai">#FFFFEFD5</color>
+    <color name="grey">#FFADAEAE</color>
+    <color name="lagoon">#FF2A8CFF</color>
 </resources>

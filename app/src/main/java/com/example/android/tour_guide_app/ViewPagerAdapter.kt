@@ -11,9 +11,9 @@ class ViewPagerAdapter(fragment: FragmentActivity): FragmentStateAdapter(fragmen
     }
 
     override fun createFragment(position: Int): Fragment {
-        val fragment = Component()
+        val fragment = FragmentPage()
         fragment.arguments = Bundle().apply {
-            putInt(ARG_OBJECT, position + 1)
+            putInt(ARG_OBJECT, position)
         }
         return fragment
     }

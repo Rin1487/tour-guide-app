@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="110dp"
+        android:layout_height="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/place1" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/opensans"
+        android:text="@string/name_example"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ShortDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="@string/info_example"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/Title"
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <TextView
+        android:id="@+id/Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans"
+        android:text="@string/location_example"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/ShortDesc"
+        app:layout_constraintTop_toBottomOf="@+id/ShortDesc" />
+
+    <TextView
+        android:id="@+id/OpenUntilLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open_until"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/Address"
+        app:layout_constraintTop_toBottomOf="@+id/Address" />
+
+    <TextView
+        android:id="@+id/OpenUntil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/open_until_example"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/OpenUntilLabel"
+        app:layout_constraintStart_toEndOf="@+id/OpenUntilLabel" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/ExpandableGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:constraint_referenced_ids="AvgLabel,Address2,OpenUntilLabel2,CallIco,Avg,InfoIco,OpenUntil2,InfoLong,LocationIco,Call" />
+
+    <ImageView
+        android:id="@+id/InfoIco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/info" />
+
+    <TextView
+        android:id="@+id/InfoLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/long_info_example"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@+id/InfoIco"
+        app:layout_constraintStart_toEndOf="@+id/InfoIco" />
+
+    <TextView
+        android:id="@+id/AvgLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/average"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/InfoLong"
+        app:layout_constraintTop_toBottomOf="@+id/InfoLong" />
+
+    <TextView
+        android:id="@+id/Avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/average_example"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@+id/AvgLabel"
+        app:layout_constraintStart_toEndOf="@+id/AvgLabel" />
+
+    <TextView
+        android:id="@+id/OpenUntilLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/open_until"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/AvgLabel"
+        app:layout_constraintTop_toBottomOf="@+id/AvgLabel" />
+
+    <TextView
+        android:id="@+id/OpenUntil2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/open_until_example"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="@+id/OpenUntilLabel2"
+        app:layout_constraintStart_toEndOf="@+id/OpenUntilLabel2" />
+
+    <ImageView
+        android:id="@+id/LocationIco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OpenUntilLabel2"
+        app:srcCompat="@drawable/location" />
+
+    <TextView
+        android:id="@+id/Address2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/location_example"
+        android:textColor="@color/lagoon"
+        app:layout_constraintBottom_toBottomOf="@+id/LocationIco"
+        app:layout_constraintStart_toEndOf="@+id/LocationIco"
+        app:layout_constraintTop_toTopOf="@+id/LocationIco" />
+
+    <ImageView
+        android:id="@+id/CallIco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LocationIco"
+        app:srcCompat="@drawable/call" />
+
+    <TextView
+        android:id="@+id/Call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/phone_example"
+        android:textColor="@color/lagoon"
+        app:layout_constraintBottom_toBottomOf="@+id/CallIco"
+        app:layout_constraintStart_toEndOf="@+id/CallIco"
+        app:layout_constraintTop_toTopOf="@+id/CallIco" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

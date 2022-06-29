@@ -2,4 +2,14 @@
     <string name="app_name">tour-guide-app</string>
     <string name="bishkek_guide">Bishkek Guide</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_example">Cyclonele</string>
+    <string name="info_example">Ресторан</string>
+    <string name="long_info_example">Ресторан Европейской кухни</string>
+    <string name="location_example">ул.ЛьваТолстого,102/4</string>
+    <string name="open_until">Открыто до</string>
+    <string name="open_until_example">20:00</string>
+    <string name="average">Средний чек</string>
+    <string name="average_example">5000 c</string>
+    <string name="phone_example">+996 505 505 505</string>
+
 </resources>
