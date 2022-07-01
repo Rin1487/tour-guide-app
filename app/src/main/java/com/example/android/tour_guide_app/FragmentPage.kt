@@ -8,27 +8,27 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android.tour_guide_app.databinding.FragmentPageBinding
 
+
 const val ARG_OBJECT = "object"
 
 class FragmentPage : Fragment() {
     private val adapter = PlaceAdapter()
     private lateinit var binding: FragmentPageBinding
     private var position = 0
-    private val cinemas: MutableList<Place> = mutableListOf(
-        Place(R.drawable.place1, "Россия", "Кинотеатр", "Кинотеатр", "24:00", "проспект Чуй, 213", "geo:42.87672, 74.596946", "400c"),
-        Place(R.drawable.place1, "Ала-Тоо", "Кинотеатр", "Кинотеатр", "24:00", "проспект Чуй, 187","geo:42.87672, 74.596946", "400c"),
-        Place(R.drawable.place1, "ЦУМ Cinema", "Лазерный кинотеатр", "Кинотеатр", "24:00", "Шопокова, 91","geo:42.87672, 74.596946", "400c"),
-    )
     private val cafes: MutableList<Place> = mutableListOf(
-        Place(R.drawable.place1, "KFC","Fast food" , "ресторан быстрого обслуживания", "2:00", "улица Максима Горького, 130","geo:42.87672, 74.596946", "400c"),
-        Place(R.drawable.place1, "Dodo pizza", "Пиццерия", "ресторан быстрого обслуживания", "6:00", "улица Максима Горького, 124","geo:42.87672, 74.596946", "400c"),
-        Place(R.drawable.place1, "Империя пиццы", "Пиццерия", "ресторан быстрого обслуживания", "4:00", "Байтик Баатыра, 98","geo:42.87672, 74.596946", "400c"),
+        Place(R.drawable.kfc, "KFC","Fast food" , "ресторан быстрого обслуживания", "2:00", "Горького 130 Радищева 1", "900c","+996 550 880 197"),
+        Place(R.drawable.dodo, "Dodo pizza", "Пиццерия", "ресторан быстрого обслуживания", "6:00", "Байтик баатыра 96", "500c", "+996 312 550 550"),
+        Place(R.drawable.empire, "Империя пиццы", "Пиццерия", "ресторан быстрого обслуживания", "4:00", "Горького 27,1", "350c","+996 772 554 090"),
     )
     private val places: MutableList<Place> = mutableListOf(
-        Place(R.drawable.place1, "Место", "Инфо", "Описание", "X:YY", "Улица 1а","geo:42.87672, 74.596946", "400c"),
-        Place(R.drawable.place1, "Место", "Инфо", "Описание", "X:YY", "Улица 1а","geo:42.87672, 74.596946", "400c"),
-        Place(R.drawable.place1, "Место", "Инфо", "Описание", "X:YY", "Улица 1а","geo:42.87672, 74.596946", "400c"),
-        Place(R.drawable.place1, "Место", "Инфо", "Описание", "X:YY", "Улица 1а","geo:42.87672, 74.596946", "400c"),
+        Place(R.drawable.baku, "Огни баку", "Шашлычная", "Ресторан / Кафе", "24:00", "Анарбека Бакаева, 53а", "600с","+996 551 165 135"),
+        Place(R.drawable.no1, "Шашлычная №1", "Шашлычная", "Ресторан / Кафе", "01:00", "Cаякбая Каралаева, 1а", "700c","+996 551 706 080"),
+        Place(R.drawable.karabah, "Карабах", "Шашлычная", "Ресторан / Кафе", "03:00", "Московская, 15/1", "700c","+996 997 223 321"),
+    )
+    private val cinemas: MutableList<Place> = mutableListOf(
+        Place(R.drawable.rossia, "Россия", "Кинотеатр", "Кинотеатр", "24:00", "проспект Чуй 213", "250с","+996 312 660 960"),
+        Place(R.drawable.ala_too, "Ала-Тоо", "Кинотеатр", "Кинотеатр", "24:00", "проспект Чуй 187", "400c", "+996 312 661 957"),
+        Place(R.drawable.tsum, "ЦУМ Cinema", "Лазерный кинотеатр", "Кинотеатр", "24:00", "Шопокова 91","380c", "+996 500 000 005"),
     )
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {

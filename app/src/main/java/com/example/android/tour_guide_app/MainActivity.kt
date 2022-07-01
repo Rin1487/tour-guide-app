@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
     private lateinit var pagerAdapter: ViewPagerAdapter
-    private val tabNames: Array<String> = arrayOf("Рестораны", "Места", "Кинотеатры")
+    private val tabNames: Array<String> = arrayOf("Фастфуд", "Шашлычные", "Кинотеатры")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         TabLayoutMediator(tabLayout, viewPager){
             tab, position -> tab.text = tabNames[position]
         }.attach()
-
-
     }
+
 }
